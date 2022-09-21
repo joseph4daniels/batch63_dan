@@ -9,7 +9,7 @@ public class multiplication_table {
 			System.out.println(a + " x " + i + " = " + a*i );
 		}*/
 		
-		int sumEven = 0;		
+		/*int sumEven = 0;		
 		int sumOdd = 0;
 		for(int i = 0; i <= 10; i++) {
 			if(i % 2 == 0)
@@ -19,7 +19,16 @@ public class multiplication_table {
 		}
 		System.out.println(sumEven);
 		System.out.println(sumOdd);
+		*/
 		
+		int reverse = 0;
+		int n = 123;
+		while (n != 0) {
+			int temp = (n % 10);
+			n = n / 10;
+			reverse = reverse * 10 + temp;
+		}
+		System.out.println(reverse);
 	}
 
 }
