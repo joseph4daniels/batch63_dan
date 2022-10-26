@@ -5,18 +5,18 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cogent.boot.entity.Employee;
-import com.cogent.boot.repository.EmployeeRepo;
+import com.cogent.boot.entity.Celebration;
+import com.cogent.boot.repository.CelebrationRepo;
 
 @Service
-public class EmployeeService {
+public class CelebrationService {
 
 	@Autowired
-	EmployeeRepo employeeRepo;
+	CelebrationRepo celebrationRepo;
 	
-	public List<Employee> performSorting() {
+	public List<Celebration> displayRecord() {
 		System.out.println("using service layer to print records");
-		return employeeRepo.findAllSortedByName();
+		return celebrationRepo.displayAll();
 	}
 	
 }
