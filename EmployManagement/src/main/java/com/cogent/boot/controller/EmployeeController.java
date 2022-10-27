@@ -3,6 +3,8 @@ package com.cogent.boot.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
@@ -39,7 +41,7 @@ public class EmployeeController {
 	//delete
 	
 	@PostMapping("/addemployee")
-	Employee addEmployee(@RequestBody Employee employee) {
+	Employee addEmployee(@Valid @RequestBody Employee employee) {
 		return employeeRepo.save(employee);
 	}
 	
